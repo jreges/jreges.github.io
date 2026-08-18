@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "gerado_em": "18/08/2026 18:59",
+    "fonte": "Financeiro.xlsx",
+    "hoje": "18/08/2026"
+  },
+  "kpis": {
+    "patrimonio": 204203.45,
+    "investido": 202923.45,
+    "idade": 31.0,
+    "gasto_anual": 115316.32
+  },
+  "metas": [
+    {
+      "nome": "10K Investido",
+      "progresso": 1.0
+    },
+    {
+      "nome": "50K Investido",
+      "progresso": 1.0
+    },
+    {
+      "nome": "100K Investido",
+      "progresso": 1.0
+    },
+    {
+      "nome": "250K Investido",
+      "progresso": 0.8168138
+    },
+    {
+      "nome": "500K Investido",
+      "progresso": 0.4084069
+    },
+    {
+      "nome": "1M Investido",
+      "progresso": 0.20420345
+    },
+    {
+      "nome": "1.5M Investido",
+      "progresso": 0.1361356333
+    },
+    {
+      "nome": "2M Investido",
+      "progresso": 0.102101725
+    }
+  ],
+  "fluxo": {
+    "meses": [
+      {
+        "mes": "2023-12",
+        "entradas": 0.0,
+        "saidas": 344.44,
+        "resultado": -344.44
+      },
+      {
+        "mes": "2024-01",
+        "entradas": 14264.05,
+        "saidas": 9540.63,
+        "resultado": 4723.42
+      },
+      {
+        "mes": "2024-02",
+        "entradas": 11111.66,
+        "saidas": 3276.96,
+        "resultado": 7834.7
+      },
+      {
+        "mes": "2024-03",
+        "entradas": 24338.04,
+        "saidas": 10648.36,
+        "resultado": 13689.68
+      },
+      {
+        "mes": "2024-04",
+        "entradas": 16887.27,
+        "saidas": 3728.96,
+        "resultado": 13158.31
+      },
+      {
+        "mes": "2024-05",
+        "entradas": 10515.19,
+        "saidas": 8626.92,
+        "resultado": 1888.27
+      },
+      {
+        "mes": "2024-06",
+        "entradas": 10157.11,
+        "saidas": 8932.73,
+        "resultado": 1224.38
+      },
+      {
+        "mes": "2024-07",
+        "entradas": 17597.87,
+        "saidas": 8818.47,
+        "resultado": 8779.4
+      },
+      {
+        "mes": "2024-08",
+        "entradas": 8968.31,
+        "saidas": 7203.36,
+        "resultado": 1764.95
+      },
+      {
+        "mes": "2024-09",
+        "entradas": 14398.38,
+        "saidas": 20411.93,
+        "resultado": -6013.55
+      },
+      {
+        "mes": "2024-10",
+        "entradas": 17503.79,
+        "saidas": 4748.48,
+        "resultado": 12755.31
+      },
+      {
+        "mes": "2024-11",
+        "entradas": 4214.6,
+        "saidas": 606.05,
+        "resultado": 3608.55
+      },
+      {
+        "mes": "2024-12",
+        "entradas": 0.0,
+        "saidas": 1175.43,
+        "resultado": -1175.43
+      },
+      {
+        "mes": "2025-01",
+        "entradas": 10030.74,
+        "saidas": 9447.29,
+        "resultado": 583.45
+      },
+      {
+        "mes": "2025-02",
+        "entradas": 25402.68,
+        "saidas": 9326.1,
+        "resultado": 16076.58
+      },
+      {
+        "mes": "2025-03",
+        "entradas": 12980.64,
+        "saidas": 7381.89,
+        "resultado": 5598.75
+      },
+      {
+        "mes": "2025-04",
+        "entradas": 15175.63,
+        "saidas": 8938.82,
+        "resultado": 6236.81
+      },
+      {
+        "mes": "2025-05",
+        "entradas": 16769.26,
+        "saidas": 10835.81,
+        "resultado": 5933.45
+      },
+      {
+        "mes": "2025-06",
+        "entradas": 14913.05,
+        "saidas": 12201.87,
+        "resultado": 2711.18
+      },
+      {
+        "mes": "2025-07",
+        "entradas": 10039.06,
+        "saidas": 10460.93,
+        "resultado": -421.87
+      },
+      {
+        "mes": "2025-08",
+        "entradas": 13006.15,
+        "saidas": 10226.16,
+        "resultado": 2779.99
+      },
+      {
+        "mes": "2025-09",
+        "entradas": 13909.36,
+        "saidas": 11805.7,
+        "resultado": 2103.66
+      },
+      {
+        "mes": "2025-10",
+        "entradas": 13001.75,
+        "saidas": 12296.88,
+        "resultado": 704.87
+      },
+      {
+        "mes": "2025-11",
+        "entradas": 20447.45,
+        "saidas": 13100.31,
+        "resultado": 7347.14
+      },
+      {
+        "mes": "2025-12",
+        "entradas": 18232.73,
+        "saidas": 21015.19,
+        "resultado": -2782.46
+      },
+      {
+        "mes": "2026-01",
+        "entradas": 11451.11,
+        "saidas": 9465.44,
+        "resultado": 1985.67
+      },
+      {
+        "mes": "2026-02",
+        "entradas": 26961.42,
+        "saidas": 10357.41,
+        "resultado": 16604.01
+      },
+      {
+        "mes": "2026-03",
+        "entradas": 13787.22,
+        "saidas": 11683.04,
+        "resultado": 2104.18
+      },
+      {
+        "mes": "2026-04",
+        "entradas": 20838.71,
+        "saidas": 17550.23,
+        "resultado": 3288.48
+      },
+      {
+        "mes": "2026-05",
+        "entradas": 19203.78,
+        "saidas": 8500.42,
+        "resultado": 10703.36
+      }
+    ],
+    "ultimo_mes": {
+      "mes": "2026-05",
+      "entradas": 19203.78,
+      "saidas": 8500.42,
+      "resultado": 10703.36,
+      "categorias_saida": [
+        {
+          "categoria": "Apartamento",
+          "valor": 1449.28
+        },
+        {
+          "categoria": "Alimentação",
+          "valor": 1127.75
+        },
+        {
+          "categoria": "Innovale",
+          "valor": 1065.88
+        },
+        {
+          "categoria": "Compras Online",
+          "valor": 842.34
+        },
+        {
+          "categoria": "Gasto pais",
+          "valor": 601.51
+        },
+        {
+          "categoria": "Condominio",
+          "valor": 572.1
+        },
+        {
+          "categoria": "Volei",
+          "valor": 480.0
+        },
+        {
+          "categoria": "Outros",
+          "valor": 422.91
+        },
+        {
+          "categoria": "Dízimo",
+          "valor": 400.0
+        },
+        {
+          "categoria": "Energia",
+          "valor": 372.67
+        },
+        {
+          "categoria": "Impressora 3D",
+          "valor": 292.86
+        },
+        {
+          "categoria": "Streaming",
+          "valor": 212.07
+        },
+        {
+          "categoria": "Academia",
+          "valor": 159.0
+        },
+        {
+          "categoria": "Limpeza",
+          "valor": 150.0
+        },
+        {
+          "categoria": "Lanche",
+          "valor": 117.0
+        },
+        {
+          "categoria": "Viagem",
+          "valor": 60.7
+        },
+        {
+          "categoria": "Refeição",
+          "valor": 57.62
+        },
+        {
+          "categoria": "Taxas",
+          "valor": 51.19
+        },
+        {
+          "categoria": "Comgás",
+          "valor": 30.54
+        },
+        {
+          "categoria": "lanch",
+          "valor": 30.0
+        },
+        {
+          "categoria": "Transporte",
+          "valor": 5.0
+        }
+      ]
+    },
+    "categorias_saida_12m": [
+      {
+        "categoria": "Viagem",
+        "valor": 24243.43
+      },
+      {
+        "categoria": "Apartamento",
+        "valor": 13100.61
+      },
+      {
+        "categoria": "Alimentação",
+        "valor": 10171.82
+      },
+      {
+        "categoria": "Outros",
+        "valor": 9612.46
+      },
+      {
+        "categoria": "Compras extras",
+        "valor": 8585.17
+      },
+      {
+        "categoria": "Innovale",
+        "valor": 6725.56
+      },
+      {
+        "categoria": "Condominio",
+        "valor": 5061.06
+      },
+      {
+        "categoria": "Despesa apto",
+        "valor": 4582.33
+      },
+      {
+        "categoria": "Compras Online",
+        "valor": 4277.83
+      },
+      {
+        "categoria": "Gasto pais",
+        "valor": 4036.69
+      },
+      {
+        "categoria": "Streaming",
+        "valor": 3101.78
+      },
+      {
+        "categoria": "Limpeza",
+        "valor": 3000.0
+      },
+      {
+        "categoria": "Energia",
+        "valor": 2952.98
+      },
+      {
+        "categoria": "Volei",
+        "valor": 2726.32
+      },
+      {
+        "categoria": "Lanche",
+        "valor": 1847.26
+      },
+      {
+        "categoria": "Gasolina",
+        "valor": 1565.16
+      },
+      {
+        "categoria": "Academia",
+        "valor": 1544.5
+      },
+      {
+        "categoria": "Dízimo",
+        "valor": 1457.5
+      },
+      {
+        "categoria": "Internet",
+        "valor": 1287.99
+      },
+      {
+        "categoria": "Refeição",
+        "valor": 1257.71
+      },
+      {
+        "categoria": "Taxas",
+        "valor": 894.46
+      },
+      {
+        "categoria": "Roupas",
+        "valor": 848.14
+      },
+      {
+        "categoria": "Educação",
+        "valor": 594.0
+      },
+      {
+        "categoria": "Despesa casa",
+        "valor": 350.0
+      },
+      {
+        "categoria": "Impressora 3D",
+        "valor": 292.86
+      },
+      {
+        "categoria": "Pedágio",
+        "valor": 266.2
+      },
+      {
+        "categoria": "Transporte",
+        "valor": 251.58
+      },
+      {
+        "categoria": "Barbeiro",
+        "valor": 215.0
+      },
+      {
+        "categoria": "Remédio",
+        "valor": 186.9
+      },
+      {
+        "categoria": "Comgás",
+        "valor": 173.16
+      },
+      {
+        "categoria": "Estacionamento",
+        "valor": 144.19
+      },
+      {
+        "categoria": "Seguro",
+        "valor": 129.69
+      },
+      {
+        "categoria": "Entretenimento",
+        "valor": 102.89
+      },
+      {
+        "categoria": "IPTU",
+        "valor": 68.01
+      },
+      {
+        "categoria": "Farmácia",
+        "valor": 56.05
+      },
+      {
+        "categoria": "Reembolso",
+        "valor": 33.33
+      },
+      {
+        "categoria": "lanch",
+        "valor": 30.0
+      }
+    ],
+    "entradas_fontes_12m": [
+      {
+        "fonte": "Salário",
+        "valor": 89010.8
+      },
+      {
+        "fonte": "Reembolso",
+        "valor": 29231.08
+      },
+      {
+        "fonte": "Adiantamento",
+        "valor": 16348.3
+      },
+      {
+        "fonte": "Wesley",
+        "valor": 12231.36
+      },
+      {
+        "fonte": "Aluguel",
+        "valor": 5881.02
+      },
+      {
+        "fonte": "Outros",
+        "valor": 4068.39
+      },
+      {
+        "fonte": "Volei",
+        "valor": 447.4
+      },
+      {
+        "fonte": "Gasto pais",
+        "valor": 301.51
+      },
+      {
+        "fonte": "Taxas",
+        "valor": 150.0
+      },
+      {
+        "fonte": "Innovale",
+        "valor": 56.0
+      },
+      {
+        "fonte": "Compras extras",
+        "valor": 51.67
+      },
+      {
+        "fonte": "Barbeiro",
+        "valor": 30.0
+      },
+      {
+        "fonte": "Compras Online",
+        "valor": 26.0
+      }
+    ]
+  },
+  "investimentos": {
+    "por_classe": [
+      {
+        "classe": "CDB / renda fixa",
+        "valor": 87088.3,
+        "pct": 42.6
+      },
+      {
+        "classe": "FIIs",
+        "valor": 24106.56,
+        "pct": 11.8
+      },
+      {
+        "classe": "Fundos de invest. (FI)",
+        "valor": 21816.51,
+        "pct": 10.7
+      },
+      {
+        "classe": "Previdência",
+        "valor": 20192.48,
+        "pct": 9.9
+      },
+      {
+        "classe": "Renda fixa",
+        "valor": 19667.73,
+        "pct": 9.6
+      },
+      {
+        "classe": "Ações",
+        "valor": 13478.03,
+        "pct": 6.6
+      },
+      {
+        "classe": "Tesouro Direto",
+        "valor": 7339.19,
+        "pct": 3.6
+      },
+      {
+        "classe": "Cripto",
+        "valor": 5557.99,
+        "pct": 2.7
+      },
+      {
+        "classe": "BDRs",
+        "valor": 2338.27,
+        "pct": 1.1
+      },
+      {
+        "classe": "ETFs",
+        "valor": 1337.46,
+        "pct": 0.7
+      },
+      {
+        "classe": "Caixa & reserva",
+        "valor": 1280.93,
+        "pct": 0.6
+      }
+    ],
+    "por_conta": [
+      {
+        "conta": "NuBank",
+        "valor": 45044.8
+      },
+      {
+        "conta": "Clear",
+        "valor": 42169.03
+      },
+      {
+        "conta": "XP",
+        "valor": 34321.62
+      },
+      {
+        "conta": "NuBank (minha carteira)",
+        "valor": 22464.77
+      },
+      {
+        "conta": "C6 (renda fixa)",
+        "valor": 16336.32
+      },
+      {
+        "conta": "NuBank (turbo)",
+        "valor": 11247.43
+      },
+      {
+        "conta": "C6 (fundos)",
+        "valor": 11018.78
+      },
+      {
+        "conta": "MP cofrinho",
+        "valor": 10118.0
+      },
+      {
+        "conta": "C6 (renda variável)",
+        "valor": 4974.97
+      },
+      {
+        "conta": "Binance",
+        "valor": 3048.67
+      },
+      {
+        "conta": "C6",
+        "valor": 1456.44
+      },
+      {
+        "conta": "Magie",
+        "valor": 1280.0
+      },
+      {
+        "conta": "MercadoBitCoin",
+        "valor": 722.62
+      }
+    ],
+    "total_patrimonio": 204203.45,
+    "evolucao_patrimonio": [
+      {
+        "mes": "2024-12",
+        "valor": 68680.98
+      },
+      {
+        "mes": "2025-01",
+        "valor": 68663.97
+      },
+      {
+        "mes": "2025-02",
+        "valor": 93037.44
+      },
+      {
+        "mes": "2025-03",
+        "valor": 108172.31
+      },
+      {
+        "mes": "2025-04",
+        "valor": 116071.79
+      },
+      {
+        "mes": "2025-05",
+        "valor": 127432.1
+      },
+      {
+        "mes": "2025-06",
+        "valor": 134305.21
+      },
+      {
+        "mes": "2025-07",
+        "valor": 145470.71
+      },
+      {
+        "mes": "2025-08",
+        "valor": 150110.9
+      },
+      {
+        "mes": "2025-09",
+        "valor": 150425.4
+      },
+      {
+        "mes": "2025-10",
+        "valor": 153865.66
+      },
+      {
+        "mes": "2025-11",
+        "valor": 168514.47
+      },
+      {
+        "mes": "2025-12",
+        "valor": 161940.8
+      },
+      {
+        "mes": "2026-01",
+        "valor": 162449.69
+      },
+      {
+        "mes": "2026-02",
+        "valor": 166652.69
+      },
+      {
+        "mes": "2026-03",
+        "valor": 175094.89
+      },
+      {
+        "mes": "2026-04",
+        "valor": 194119.76
+      },
+      {
+        "mes": "2026-05",
+        "valor": 184985.61
+      },
+      {
+        "mes": "2026-06",
+        "valor": 186008.59
+      },
+      {
+        "mes": "2026-07",
+        "valor": 202088.23
+      },
+      {
+        "mes": "2026-08",
+        "valor": 204203.45
+      }
+    ]
+  }
+}
