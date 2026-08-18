@@ -1,0 +1,7 @@
+# IMPORTANTE: o GitHub Pages publica o site PUBLICAMENTE, mesmo com repo privado.
+# Estes arquivos contêm seus dados financeiros e NUNCA devem ir para o repositório.
+data.js
+data.json
+Financeiro.xlsx
+*.xlsx
+*.xls

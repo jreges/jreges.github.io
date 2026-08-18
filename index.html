@@ -111,26 +111,28 @@
     .anim{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
   }
   @keyframes rise{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
-  .err{max-width:640px; margin:60px auto; padding:24px; background:var(--surface); border:1px solid var(--hair); border-radius:var(--r)}
-  .err code{background:var(--surface-2); padding:1px 6px; border-radius:5px; font-size:13px}
+  .loader{max-width:520px; margin:12vh auto 0; padding:30px 30px 28px; background:var(--surface); border:1px solid var(--hair); border-radius:20px; box-shadow:var(--shadow)}
+  .loader code{background:var(--surface-2); padding:1px 6px; border-radius:5px; font-size:13px}
+  .lo-eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--spine-2); font-weight:600; margin:0 0 8px}
+  .lo-title{font-family:var(--serif); font-weight:600; font-size:27px; margin:0 0 10px; letter-spacing:-.01em}
+  .lo-text{color:var(--ink-2); margin:0 0 20px; font-size:14.5px}
+  .lo-btn{display:inline-block; cursor:pointer; background:var(--spine); color:#EAF3EF; font-weight:600; font-size:14px; padding:11px 18px; border-radius:10px; transition:background .15s}
+  .lo-btn:hover{background:var(--spine-2)}
+  .lo-name{display:inline-block; margin-left:12px; font-size:13px; color:var(--muted)}
+  .lo-err{color:var(--neg); font-size:13px; min-height:18px; margin:14px 0 0}
 </style>
 </head>
 <body>
-<div class="wrap" id="app"><div class="err" id="fallback" style="display:none"></div></div>
+<div class="wrap" id="app"></div>
 
-<!-- snapshot local dos dados -->
+<!-- snapshot local dos dados (opcional: só existe no modo local, nunca no GitHub Pages) -->
 <script src="data.js" onerror="window.__noData=true"></script>
 <script>
 (function(){
-  const D = window.FIN_DATA;
   const app = document.getElementById('app');
-  if(!D){
-    const f=document.getElementById('fallback'); f.style.display='block';
-    f.innerHTML='<h2 style="font-family:var(--serif);margin:0 0 8px">Sem dados carregados</h2>'+
-      '<p>Não encontrei <code>data.js</code>. Rode <code>python build_data.py</code> na pasta para gerar o snapshot a partir da sua planilha exportada (<code>Financeiro.xlsx</code>), e recarregue esta página.</p>';
-    return;
-  }
 
+  function render(D){
+  app.innerHTML='';
   /* ---------- helpers ---------- */
   const brl = new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});
   const money = v => brl.format(v||0);
@@ -402,6 +404,45 @@
   f.appendChild(el('div',null,`Gerado em ${ (D.meta&&D.meta.gerado_em)||'—' } · fonte: ${ (D.meta&&D.meta.fonte)||'planilha' }`));
   f.appendChild(el('div',null,'Dados locais · nada é enviado para a internet'));
   app.appendChild(f);
+  } // ---- fim render ----
+
+  /* ---------- tela de carregamento (GitHub Pages / sem data.js) ---------- */
+  function showLoader(erro){
+    app.innerHTML =
+      '<div class="loader">'+
+        '<p class="lo-eyebrow">Painel financeiro</p>'+
+        '<h2 class="lo-title">Carregar dados</h2>'+
+        '<p class="lo-text">Selecione o arquivo <code>data.json</code> (ou <code>data.js</code>) '+
+          'gerado pelo <code>build_data.py</code>. Ele é lido só no seu navegador — '+
+          'nada é enviado para a internet.</p>'+
+        '<label class="lo-btn">Escolher arquivo…'+
+          '<input id="pick" type="file" accept=".json,.js,application/json" hidden>'+
+        '</label>'+
+        '<span id="pickname" class="lo-name"></span>'+
+        '<p id="perr" class="lo-err">'+(erro||'')+'</p>'+
+      '</div>';
+    const inp=document.getElementById('pick');
+    inp.addEventListener('change', function(){
+      const file=this.files[0]; if(!file) return;
+      document.getElementById('pickname').textContent=file.name;
+      const rd=new FileReader();
+      rd.onload=function(){
+        try{
+          let txt=String(rd.result).trim();
+          const i=txt.indexOf('{'), j=txt.lastIndexOf('}');
+          if(i>=0 && j>i) txt=txt.slice(i, j+1);   // aceita data.js e data.json
+          render(JSON.parse(txt));
+        }catch(e){
+          showLoader('Não consegui ler esse arquivo. Use o data.json gerado pelo build_data.py.');
+        }
+      };
+      rd.readAsText(file, 'utf-8');
+    });
+  }
+
+  /* ---------- bootstrap ---------- */
+  if(window.FIN_DATA){ render(window.FIN_DATA); }  // modo local (data.js ao lado)
+  else { showLoader(); }                            // modo GitHub Pages (upload manual)
 })();
 </script>
 </body>

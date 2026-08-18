@@ -35,26 +35,48 @@ O snapshot é manual — você atualiza quando quiser, em 3 passos:
 
 ## Como abrir
 
-- **Mais simples:** duplo clique em `index.html`. Funciona direto porque a página
-  lê o `data.js`.
-- **Alternativa (servindo o `data.json`):**
-  ```bash
-  python -m http.server 8000
-  # abra http://localhost:8000
-  ```
+A página funciona de dois jeitos, com o mesmo `index.html`:
 
-## Privacidade e hospedagem
+- **Modo local (duplo clique):** se o `data.js` estiver na mesma pasta, é só abrir o
+  `index.html`. Ele carrega os dados automaticamente.
+- **Modo upload (GitHub Pages ou qualquer lugar sem os dados ao lado):** ao abrir sem
+  o `data.js`, a página mostra um botão **"Escolher arquivo…"**. Você seleciona o
+  `data.json` do seu computador e ele é lido **só no navegador** — nada é enviado para
+  a internet. É esse modo que torna o GitHub Pages seguro (veja abaixo).
 
-Estes são dados financeiros pessoais, então vale reforçar o que já conversamos:
+## Publicar no GitHub Pages (com segurança)
 
-- **Repositório privado ≠ site privado.** No GitHub Pages, mesmo com o repositório
-  privado, o site publicado fica acessível por qualquer um com a URL. Para dados
-  sensíveis, isso **não** é privacidade de verdade.
-- **Recomendado começar local** (é o que está aqui): a dashboard roda no seu
-  computador e nada vai para a internet.
-- **Se quiser acesso remoto depois**, hospede em **Cloudflare Pages** ou **Netlify**
-  com autenticação (Access / senha) — continua de graça e aí sim fica protegido.
-  O `index.html` é idêntico nos dois casos; só muda o "onde".
+Dá para usar o GitHub Pages, **desde que os dados nunca sejam publicados.** O ponto
+que exige cuidado: no GitHub Pages, o site publicado é **público** mesmo quando o
+repositório é privado — só o Enterprise Cloud (pago) permite site com acesso
+restrito. Um repositório privado protege o *código*, não o *site*.
+
+A solução é separar o app dos dados: **só o `index.html` vai para o GitHub**; o
+`data.json` fica no seu computador e é carregado pelo botão "Escolher arquivo…".
+
+Passo a passo:
+
+1. Crie um repositório no GitHub (pode ser privado; a proteção real vem do passo 3).
+2. Suba **apenas** o `index.html` (e, se quiser, o `README.md` e o `build_data.py`).
+   O `.gitignore` desta pasta já bloqueia `data.js`, `data.json` e `*.xlsx` para você
+   não subir os dados por engano.
+3. No repositório: **Settings → Pages → Build and deployment → Source: Deploy from a
+   branch → `main` / root → Save**. Em ~1 min o site fica no ar em
+   `https://SEU-USUARIO.github.io/NOME-DO-REPO/`.
+4. Abra a URL, clique em **"Escolher arquivo…"** e selecione o `data.json` gerado
+   pelo `build_data.py`. Os dados são lidos no navegador e **não** vão para o GitHub.
+
+> **Teste de sanidade:** abra a URL do Pages numa janela anônima (deslogado). Você deve
+> ver a tela "Carregar dados", **nunca** seus números. Se aparecerem valores, algum
+> `data.*` foi commitado sem querer — remova do repositório.
+
+### Alternativa: acesso remoto com os dados já carregados
+
+Se um dia quiser abrir de qualquer lugar **sem** ter o arquivo em mãos, aí sim os
+dados precisam estar hospedados — e isso exige autenticação de verdade. Nesse caso,
+**Cloudflare Pages** ou **Netlify** com senha/login (Access) são o caminho, continuam
+de graça, e o `index.html` é o mesmo. Só aí faz sentido publicar o `data.js` junto,
+porque o acesso fica protegido por login.
 
 ## Notas sobre os dados (o que foi encontrado ao montar)
 
@@ -74,10 +96,12 @@ resumo:
 
 ## Arquivos
 
-| Arquivo | O que é |
-|---|---|
-| `index.html` | A dashboard. Abra este. |
-| `build_data.py` | Lê `Financeiro.xlsx` e gera o snapshot. |
-| `data.json` | Snapshot dos dados (canônico). |
-| `data.js` | Mesmo snapshot, para abrir via duplo clique. |
-| `Financeiro.xlsx` | *(você adiciona)* export da sua planilha. |
+| Arquivo | O que é | Vai pro GitHub? |
+|---|---|---|
+| `index.html` | A dashboard. Abra este. | **Sim** (é só a interface) |
+| `build_data.py` | Lê `Financeiro.xlsx` e gera o snapshot. | Opcional |
+| `README.md` | Este guia. | Opcional |
+| `.gitignore` | Impede subir os dados por engano. | Sim |
+| `data.json` | Snapshot dos dados (canônico). | **Não** — dados pessoais |
+| `data.js` | Mesmo snapshot, para o modo duplo clique. | **Não** — dados pessoais |
+| `Financeiro.xlsx` | *(você adiciona)* export da sua planilha. | **Não** — dados pessoais |
